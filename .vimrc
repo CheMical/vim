@@ -25,7 +25,7 @@ set smarttab
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=2
 set softtabstop=2
-:set sts=2
+set sts=2
 
 " Cool tab completion stuff
 set wildmenu
@@ -46,9 +46,8 @@ set incsearch
 " Highlight things that we find with the search
 set hlsearch
 
+" Setup for piping in stdin
+au StdinReadPost * set buftype=nofile
 
 filetype plugin indent on
 syntax on
-
-" Setup for piping in stdin
-:au StdinReadPost * set buftype=nofile
